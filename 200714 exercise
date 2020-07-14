@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+	int mode;
+	double r, t, x, y;
+	printf("Select mode: ");
+	scanf("%d", &mode);
+
+	switch (mode)
+	{
+	case 0:
+		printf("Enter the radius and degree: ");
+		scanf("%lf%lf", &r, &t);
+		printf("x: %lf\ny: %lf\n", r * cos(t), r * sin(t));
+		break;
+
+	case 1:
+		printf("Enter the x and y: ");
+		scanf("%lf%lf", &x, &y);
+		r = sqrt(x * x + y * y);
+		printf("r: %lf\ntheta: %lf\n", r, asin(x / r));
+		break;
+	}
+	return 0;
+}
