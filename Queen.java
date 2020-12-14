@@ -103,7 +103,7 @@ public class Queen {
         return cnt;
     }
 
-    public static void Print() {
+    public static void Print() {        // 체스판 출력
         for(int i = 0; i < nSize; i++) {
             for(int j = 0; j < nSize; j++)
                 System.out.print(board[i][j] + " ");
@@ -112,14 +112,14 @@ public class Queen {
         System.out.println();
     }
 
-    public static void BoardInit() {
+    public static void BoardInit() {    // 체스판 초기화
         for(int i = 0; i < nSize; i++) {
             for(int j = 0; j < nSize; j++)
                 board[i][j] = 0;
         }
     }
 
-    public static boolean CheckMove(int currentRow, int col) {
+    public static boolean CheckMove(int currentRow, int col) {  // 해당 자리에 퀸을 놓을 수 있는지 판단
         int i = 0;
         for(i = 0; i < currentRow; i++) {               //check column
             if(board[i][col] == 1)    return false;
